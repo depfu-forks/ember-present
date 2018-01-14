@@ -21,10 +21,12 @@ export default Component.extend(EmberKeyboard, {
     let role = this.get('role');
     let current = this.get('slidesService.current');
 
-    if (role === 'screen') {
+    if (role === 'screen') { //TODO: GJ: clean up
       return current.screenComponentPath;
     } else if (role === 'presenter') {
       return current.presenterComponentPath;
+    } else if (role === 'notes') {
+      return current.notesComponentPath;
     } else if (role === 'audience') {
       return current.audienceComponentPath;
     }

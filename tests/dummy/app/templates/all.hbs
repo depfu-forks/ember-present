@@ -1,0 +1,27 @@
+<button onclick={{action 'previous'}}>Previous</button>
+<button onclick={{action 'next'}}>Next</button>
+
+<hr />
+
+<table width="100%">
+  <tr>
+    <td>
+      Screen:
+      <iframe src="/screen?slide={{model.currentSlide}}" style="width: 100%; height: 35vh;" />
+    </td>
+    <td>
+      Notes:
+      <iframe src="/notes?slide={{model.currentSlide}}" style="width: 100%; height: 35vh;" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Presenter:
+      <iframe src="/presenter?slide={{model.currentSlide}}" style="width: 100%; height: 35vh;" />
+    </td>
+    <td>
+      Audience:
+      <iframe src="/audience?slide={{model.currentSlide}}" style="width: 100%; height: 35vh;" />
+    </td>
+  </tr>
+</table>

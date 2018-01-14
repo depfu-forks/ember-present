@@ -22,6 +22,7 @@ export default Service.extend(Evented, {
         slide.componentPath = `slides/${slide.name}`; //TODO: GJ: zap
         slide.screenComponentPath = `slides/screen/${slide.name}`;
         slide.presenterComponentPath = `slides/presenter/${slide.name}`;
+        slide.notesComponentPath = `slides/notes/${slide.name}`;
         slide.audienceComponentPath = `slides/audience/${slide.name}`;
         slides.pushObject(slide);
       });
