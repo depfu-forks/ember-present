@@ -16,9 +16,13 @@ export default Service.extend(Evented, {
     let slides = A();
 
     if (config) {
+      //TODO: GJ: build up a map for each role
       config.slides.forEach((slide) => {
         //TODO: GJ: check if components exist
-        slide.componentPath = `slides/${slide.name}`;
+        slide.componentPath = `slides/${slide.name}`; //TODO: GJ: zap
+        slide.screenComponentPath = `slides/screen/${slide.name}`;
+        slide.presenterComponentPath = `slides/presenter/${slide.name}`;
+        slide.audienceComponentPath = `slides/audience/${slide.name}`;
         slides.pushObject(slide);
       });
     }

@@ -1,7 +1,13 @@
 
 export default {
   slides: [
-    { name: 'slide-1' },
+    {
+      name: 'introduction-slide',
+      roles: {
+        screen: true,
+        presenter: true
+      }
+    },
     { name: 'slide-2' },
     {
       name: 'slide-3',
